@@ -1,0 +1,16 @@
+:root {
+  --mdc-protected-button-label-text-color: var(--secondary-color);
+  --mdc-protected-button-container-color: var(--primary-color);
+  --mdc-protected-button-disabled-container-color: gray;
+  --mdc-protected-button-disabled-label-text-color: black;
+}
+.mat-mdc-raised-button:not(:disabled).mat-primary {
+  font-weight: bold;
+}
+.mat-mdc-raised-button:not(:disabled).mat-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.mat-mdc-raised-button:not(:disabled).mat-accent {
+  background-color: var(--accent-color);
+}

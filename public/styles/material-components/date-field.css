@@ -1,0 +1,10 @@
+:root {
+  --mdc-icon-button-icon-color: var(--primary-color);
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 8px !important;
+  border: 8px solid var(--secondary-color) !important;
+}
+mat-hint {
+  color: gray;
+}

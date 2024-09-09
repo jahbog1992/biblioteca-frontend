@@ -1,0 +1,18 @@
+:root {
+  --mdc-checkbox-unselected-focus-icon-color: var(--primary-color);
+  --mdc-checkbox-unselected-hover-icon-color: white;
+  --mdc-checkbox-unselected-icon-color: var(--primary-color);
+  --mdc-checkbox-unselected-pressed-icon-color: var(--primary-color);
+
+  --mdc-checkbox-selected-focus-icon-color: var(--primary-color);
+  --mdc-checkbox-selected-hover-icon-color: var(--primary-color);
+  --mdc-checkbox-selected-icon-color: var(--primary-color);
+  --mdc-checkbox-selected-pressed-icon-color: var(--primary-color);
+
+  --mdc-checkbox-selected-icon-color: var(--primary-color);
+}
+
+/*  Override material select check icon color */
+.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after {
+  color: white !important;
+}

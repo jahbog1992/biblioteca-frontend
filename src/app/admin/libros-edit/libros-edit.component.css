@@ -1,0 +1,73 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  & .title-container {
+    display: flex;
+    justify-content: center;
+    & .title-sub-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+      & .title {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+  & .content-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & .content-sub-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      & .card-container {
+        width: 300px; 
+        background-color: var(--secondary-color);
+        border-radius: 8px;
+        & .form-container {
+          width: 100%;
+          padding-top: 24px;
+          text-align: center;
+          & .title {
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 16px;
+          }
+          & form > * {
+            width: 240px;
+          }
+          & form {
+            margin-top: 20px;
+            & .register {
+              margin-top: 18px;
+              font-size: 12px;
+              width: 100%;
+              & span {
+                color: white;
+                & a {
+                  color: var(--accent-color);
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.personalizado{
+  align-items: flex-start;
+  display: flex;
+  text-align: center;
+  width: 100% !important;
+}

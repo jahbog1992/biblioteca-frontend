@@ -1,0 +1,52 @@
+<div class="main-container">
+
+  <div class="title-container">
+    <div class="title-sub-container">
+      <span class="title">Mantenimiento de libros</span>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="content-sub-container">
+      <div class="card-container box-shadow">
+        <div class="form-container">
+          <span class="title"> REGISTRO </span>
+          <form [formGroup]="registerForm">
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input type="text" matInput formControlName="name" />
+              @if (registerForm.controls.nombre.hasError('required')) {
+              <mat-error>Nombre es <strong>requerido</strong></mat-error>
+              }
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Autor</mat-label>
+              <input type="text" matInput formControlName="autor" />
+              @if (registerForm.controls.autor.hasError('required')) {
+              <mat-error>Autor es <strong>requerido</strong></mat-error>
+              }
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>ISBN</mat-label>
+              <input type="text" matInput formControlName="isbn" />
+              @if (registerForm.controls.isbn.hasError('required')) {
+              <mat-error>ISBN es <strong>requerido</strong></mat-error>
+              }
+            </mat-form-field>
+            <div class="row personalizado">
+              <div class="col"><button mat-raised-button color="secundary" (click)="onCancel()">
+                  CANCELAR
+                </button> </div>
+              <div class="col">
+                <button mat-raised-button color="primary" [disabled]="registerForm.invalid" (click)="onSave()">
+                  REGISTRAR
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,59 @@
+<div class="parent-container">
+    <div class="container">
+      <section class="filters">
+        <form class="form" [formGroup]="filterFormGroup">
+          <div class="genre"> 
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="loadLibros()"
+              [disabled]="!librosLoaded"
+            >
+              CONSULTAR
+            </button>
+          </div> 
+        </form>
+      </section>
+      <section class="table">
+
+        <mat-toolbar>
+          <button mat-button (click)="openEditModal()">Agregar</button>  
+        </mat-toolbar>
+
+        <table mat-table [dataSource]="dataSource" matSort> 
+
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+            <td mat-cell (dblclick)="Editar(element)"  *matCellDef="let element">{{ element.nombre }}</td>
+          </ng-container>
+          
+          <ng-container matColumnDef="autor">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Autor</th>
+            <td mat-cell (dblclick)="Editar(element)"  *matCellDef="let element">{{ element.autor }}</td>
+          </ng-container>
+          
+          <ng-container matColumnDef="isbn">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ISBN</th>
+            <td mat-cell (dblclick)="Editar(element)"  *matCellDef="let element">{{ element.isbn }}</td>
+          </ng-container> 
+            
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr> 
+          
+          <tr *matNoDataRow>
+            <td colspan="6">
+              <div class="empty-table">
+                <span class="text"
+                  >No hay datos que coincidan con los filtros</span
+                >
+              </div>
+            </td>
+          </tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </section>
+    </div>
+  </div>
+  
+
+  

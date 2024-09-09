@@ -1,0 +1,44 @@
+<div class="admin-container">
+  <app-logged-in-header></app-logged-in-header>
+  <div class="container">
+    <section class="navigation">
+      <div
+        class="nav-item box-shadow"
+        routerLink="/admin/pedidos"
+        routerLinkActive="active"
+      >
+        <img src="images/admin/Pedidos.png" alt="Pedidos" />
+        <span>PEDIDOS</span>
+      </div>
+      <div
+        class="nav-item box-shadow"
+        routerLink="/admin/Clientes"
+        routerLinkActive="active"
+      >
+        <img src="images/admin/Clientes.png" alt="Clientes" />
+        <span>CLIENTES</span>
+      </div>
+      <div
+        class="nav-item box-shadow"
+        routerLink="/admin/libros"
+        routerLinkActive="active"
+      >
+        <img src="images/admin/Libros.png" alt="Libros" />
+        <span>LIBROS</span>
+      </div>
+
+      <div
+        class="nav-item box-shadow"
+        routerLink="/admin/reportes"
+        routerLinkActive="active"
+      >
+        <img src="images/admin/Reportes.png" alt="reports" />
+        <span>REPORTES</span>
+      </div>
+    </section>
+    <section class="current-content">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+  <app-footer></app-footer>
+</div>

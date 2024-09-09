@@ -1,0 +1,22 @@
+<div class="container box-shadow">
+  <section class="superior">
+    <div class="date-time-container">
+      <span class="date">{{ data.dateEvent }}</span>
+      <span class="time">{{ data.timeEvent }}</span>
+    </div>
+    <div class="genre-container">
+      <span>{{ data.genre }}</span>
+    </div>
+  </section>
+  <section class="middle">
+    <img [src]="data.imageUrl" alt="event image" />
+  </section>
+  <section class="bottom">
+    <div class="description-container">
+      <span>{{ data.description | textLimiter : 50 }}</span>
+    </div>
+    <div class="place-container">
+      <span>{{ data.place | textLimiter : 24 }}</span>
+    </div>
+  </section>
+</div>
